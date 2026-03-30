@@ -153,10 +153,14 @@ export const CanvasArea: React.FC<CanvasAreaProps> = ({
 
       </div>
 
-      {/* Investor Footer Bar */}
-      <div className="investor-footer">
-        <div className="footer-text-right">منصة المستثمر</div>
-        <div className="footer-text-left">al_investor.com</div>
+      {/* Modern Professional Footer */}
+      <div className="investor-footer" style={{ borderTop: `1px solid ${theme.secondaryTextColor}22` }}>
+        <div className="footer-right" style={{ color: theme.textColor }}>
+          منصة المستثمر الاقتصادية
+        </div>
+        <div className="footer-left" style={{ color: theme.textColor }}>
+          al-investor.com
+        </div>
       </div>
     </div>
   );

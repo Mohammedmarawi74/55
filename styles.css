@@ -3,6 +3,10 @@
    Friendly Class Names
    =================================== */
 
+* {
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+}
+
 /* --- Layout & Structure --- */
 .app-container {
   display: flex;
@@ -297,7 +301,7 @@
   width: 800px;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
   overflow: hidden;
-  border-radius: 24px;
+  border-radius: 0;
 }
 
 /* Structured Grid Layout for Canvas Content */
@@ -441,23 +445,23 @@
 }
 
 .expert-card-center {
-  transform: scale(1.04);
+  transform: scale(1.05);
   z-index: 10;
-  width: 32%;
-  align-self: stretch;
+  width: 30%;
+  align-self: center;
 }
 
 .expert-card-side {
   transform: scale(0.9);
   opacity: 0.5;
-  width: 25%;
+  width: 24%;
   filter: grayscale(0.3) blur(0.3px);
   align-self: center;
 }
 
 .expert-card-image-wrapper {
   width: 100%;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 4 / 5;
   overflow: hidden;
   position: relative;
   flex-shrink: 0;
@@ -624,36 +628,41 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: 28px;
-  background: linear-gradient(
-    90deg,
-    rgba(16, 185, 129, 0.9) 0%,
-    rgba(16, 185, 129, 0.7) 50%,
-    rgba(16, 185, 129, 0.9) 100%
-  );
+  height: 48px;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 24px;
+  padding: 0 40px;
   z-index: 30;
+  transition: all 0.3s ease;
 }
 
-.footer-text-right {
-  color: white;
-  font-size: 12px;
+.footer-right {
+  font-size: 14px;
   font-weight: 800;
-  letter-spacing: 0.08em;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  letter-spacing: -0.02em;
+  opacity: 0.95;
+  transition: transform 0.3s ease;
+  cursor: default;
 }
 
-.footer-text-left {
-  color: white;
-  font-size: 12px;
+.footer-left {
+  font-size: 14px;
   font-weight: 800;
-  letter-spacing: 0.08em;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
-  font-family: "Inter", "Segoe UI", sans-serif;
+  letter-spacing: 0.05em;
+  opacity: 0.95;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  transition: transform 0.3s ease;
+  cursor: default;
 }
+
+.footer-right:hover, .footer-left:hover {
+  transform: translateY(-1px);
+  opacity: 1;
+}
+
 
 .footer-year {
   display: flex;
@@ -1028,7 +1037,7 @@
   border-radius: 12px;
   padding: 16px;
   font-size: 12px;
-  font-family: "Courier New", monospace;
+  font-family: 'IBM Plex Sans Arabic', "Courier New", monospace;
   color: #34d399;
   resize: none;
   transition: all 0.2s ease;
@@ -1287,7 +1296,7 @@
   .radar-canvas {
     width: 100%;
     aspect-ratio: 3 / 4;
-    border-radius: 16px;
+    border-radius: 0;
   }
 
   .canvas-title-row {
@@ -1342,14 +1351,19 @@
   }
 
   .investor-footer {
-    height: 22px;
-    padding: 0 12px;
+    height: auto;
+    padding: 12px 20px;
+    flex-direction: column;
+    gap: 4px;
+    text-align: center;
   }
 
-  .footer-text-right,
-  .footer-text-left {
-    font-size: 9px;
+  .footer-right,
+  .footer-left {
+    font-size: 11px;
+    letter-spacing: 0;
   }
+
 
   .canvas-nav-button {
     width: 32px;
